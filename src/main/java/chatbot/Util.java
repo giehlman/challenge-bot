@@ -65,7 +65,7 @@ public class Util {
     public static void takeScreenshot(WebDriver driver) {
         try {
             File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(scrFile, new File(ChallengeBot.screenshotOutputTo + File.separator + new SimpleDateFormat("yyyyMMddhhmm'.png'").format(new Date())));
+            FileUtils.copyFile(scrFile, new File(ChallengeBot.screenshotOutputTo + File.separator + new SimpleDateFormat("screenshot_yyyyMMddhhmm'.png'").format(new Date())));
         } catch (IOException e) {
             e.printStackTrace();
         }
