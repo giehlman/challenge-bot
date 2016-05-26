@@ -1,0 +1,136 @@
+{
+  "rampUp": [
+    {
+      "wait": 60,
+      "xpath": "//div[starts-with(@id, 'LPMcontainer')]",
+      "action": "click"
+    },
+    {
+      "wait": 20,
+      "xpath": "//div[@class='lp_survey_container']",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//*[contains(text(),'representatives will be back shortly')]",
+      "action": "return"
+    },
+    {
+      "wait": 15,
+      "xpath": "//div[contains(text(),'What is your name?')]/parent::div//input",
+      "action": "sendKeys",
+      "args": "Christian"
+    },
+    {
+      "wait": 0,
+      "xpath": "//div[contains(text(),'Email Address')]/parent::div//input",
+      "action": "sendKeys",
+      "args": "info@teslat.de"
+    },
+    {
+      "wait": 0,
+      "xpath": "//div[@id='LP_TextFieldQuestion_3']//input",
+      "action": "sendKeys",
+      "args": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_submit_button']",
+      "action": "click"
+    },
+    {
+      "wait": 120,
+      "xpath": "//div[contains(text(),'You are now chatting with')]",
+      "action": ""
+    }
+  ],
+  "talk": [
+    {
+      "wait": 0,
+      "xpath" : "//div[@class='lp_input_area']//textarea",
+      "action": "sendKeys",
+      "args": "Hi, my name is Chris"
+    },
+    {
+      "wait": 5,
+      "xpath": "",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_send_button']",
+      "action": "click"
+    },
+    {
+      "wait": 0,
+      "xpath" : "//div[@class='lp_input_area']//textarea",
+      "action": "sendKeys",
+      "args": "Sorry for bad english"
+    },
+    {
+      "wait": 5,
+      "xpath": "",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_send_button']",
+      "action": "click"
+    },
+    {
+      "wait": 20,
+      "xpath": "waitForNewChatline",
+      "action": "",
+      "args" : "//div[@class='lp_chat_line_wrapper lp_agent']"
+    },
+    {
+      "wait": 10,
+      "xpath": "//div[@class='lp_input_area']//textarea",
+      "action": "sendKeys",
+      "args": "Do you have free pricing plan? My company has 2 users"
+    },
+    {
+      "wait": 5,
+      "xpath": "",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_send_button']",
+      "action": "click"
+    },
+    {
+      "wait": 30,
+      "xpath": "",
+      "action": ""
+    },
+    {
+      "wait": 10,
+      "xpath": "//div[@class='lp_input_area']//textarea",
+      "action": "sendKeys",
+      "args": "Ok cool! Thank for you time! Bye"
+    },
+    {
+      "wait": 5,
+      "xpath": "",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_send_button']",
+      "action": "click"
+    }
+  ],
+  "shutdown": [
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_close']",
+      "action": "click"
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_confirm_button']",
+      "action": "click"
+    }
+  ]
+}
