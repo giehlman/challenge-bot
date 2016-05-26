@@ -13,13 +13,8 @@ import java.util.regex.Pattern;
  */
 public class LivePersonRecipe extends JSONRecipe {
 
-    private final String _username;
-    private final String _email;
-
-    public LivePersonRecipe(JSONObject recipe, String username, String email) {
+    public LivePersonRecipe(JSONObject recipe) {
         super(recipe);
-        _username = username;
-        _email = email;
     }
 
     public boolean rampUp(WebDriver driver) {

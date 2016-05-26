@@ -3,13 +3,9 @@ package chatbot;
 import chatbot.recipes.IRecipe;
 import chatbot.recipes.LivePersonRecipe;
 import chatbot.recipes.TopformRecipe;
-import org.json.JSONObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
 
 /**
  * Created by Giehlman on 24.05.2016.
@@ -30,7 +26,7 @@ public class ChallengeBot {
 
         parseArgs(args);
 
-        System.out.println("Starting selenium web driver");
+        System.out.println("Starting selenium web driver...");
         if ("firefox".equals(useDriver)) {
             driver = new FirefoxDriver();
         } else {
@@ -45,10 +41,9 @@ public class ChallengeBot {
             IRecipe recipe;
             if (pathToJsonRecipe != null) {
                 // use the liveperson recipe as default
-                String jsonData = readFile(pathToJsonRecipe);
-                JSONObject jobj = new JSONObject(jsonData);
-                recipe = new LivePersonRecipe(jobj, username, email);
+                recipe = new LivePersonRecipe(Util.jsonFromFile(pathToJsonRecipe));
             } else {
+                // fallback example with credentials from args
                 recipe = new TopformRecipe(username, email);
             }
 
@@ -69,23 +64,6 @@ public class ChallengeBot {
             driver.close();
             driver.quit();
         }
-    }
-
-    public static String readFile(String filename) {
-        String result = "";
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(filename));
-            StringBuilder sb = new StringBuilder();
-            String line = br.readLine();
-            while (line != null) {
-                sb.append(line);
-                line = br.readLine();
-            }
-            result = sb.toString();
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-        return result;
     }
 
     private static void parseArgs(String[] args) {
