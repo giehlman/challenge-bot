@@ -73,6 +73,7 @@ public class JSONRecipe implements IRecipe {
     protected boolean interpretRecipe(WebDriver driver, JSONArray instructions) {
         JSONObject instr;
         for (int i = 0; i < instructions.length(); i++) {
+            Util.takeScreenshot(driver);
             instr = instructions.getJSONObject(i);
             try {
 
@@ -114,7 +115,6 @@ public class JSONRecipe implements IRecipe {
                                     driver.findElement(By.xpath(_xpath_submit)).click();
                                 }
                             }
-                            Util.takeScreenshot(driver);
                         } while (witReply != null);
 
                         continue;
@@ -140,7 +140,6 @@ public class JSONRecipe implements IRecipe {
                     }
                 }
 
-                Util.takeScreenshot(driver);
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -29,13 +29,13 @@
       "wait": 15,
       "xpath": "//div[contains(text(),'What is your name?')]/parent::div//input",
       "action": "sendKeys",
-      "args": "Mike"
+      "args": "Steve"
     },
     {
       "wait": 0,
       "xpath": "//div[contains(text(),'Email Address')]/parent::div//input",
       "action": "sendKeys",
-      "args": "mmeyers@typical.de"
+      "args": "steveo@getit.de"
     },
     {
       "wait": 0,
@@ -59,7 +59,7 @@
       "wait": 0,
       "xpath": "//div[@class='lp_input_area']//textarea",
       "action": "sendKeys",
-      "args": "I'm Mike"
+      "args": "I'm Steve"
     },
     {
       "wait": 2,

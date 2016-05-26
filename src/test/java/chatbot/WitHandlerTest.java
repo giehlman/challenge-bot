@@ -33,19 +33,20 @@ public class WitHandlerTest {
 
     @Test
     public void talkToWit() throws Exception {
-        String response = handler.talkToWit("How many users do you have?");
-        if (response != null) {
-            System.out.println(response);
-        }
+        String[] qs = new String[]{"How many users do you have?",
+                "Are you currently using another live chat platform on the site?",
+                "Could you please give me a rough estimate of the number of monthly visits on your website?",
+                "How many agents will you have on your side, handling your incoming chats?",
+                "May I please ask for your website URL?",
+                "Hello, I'm here to answer your questions about LivePerson services.",
+                "How can I help you today?"};
 
-        response = handler.talkToWit("Are you currently using another live chat platform on the site?");
-        if (response != null) {
-            System.out.println(response);
-        }
-
-        response = handler.talkToWit("How can I help you today?");
-        if (response != null) {
-            System.out.println(response);
+        String response;
+        for (int i = 0; i < qs.length; i++) {
+            response = handler.talkToWit(qs[i]);
+            if (response != null) {
+                System.out.println(response);
+            }
         }
     }
 }
