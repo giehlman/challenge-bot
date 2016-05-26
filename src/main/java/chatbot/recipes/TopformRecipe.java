@@ -21,6 +21,7 @@ public class TopformRecipe implements IRecipe {
     }
 
     public boolean rampUp(WebDriver driver) {
+        driver.get("https://www.deinetopform.de");
         WebDriverWait wait = new WebDriverWait(driver, 60);
         By qboxLocator = By
                 .xpath("//iframe[@id='tawkchat-minified-iframe-element']");

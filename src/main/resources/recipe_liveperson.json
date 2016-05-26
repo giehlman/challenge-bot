@@ -5,6 +5,12 @@
   },
   "rampUp": [
     {
+      "wait": 0,
+      "xpath": "",
+      "action": "get",
+      "args": "https://liveperson.com"
+    },
+    {
       "wait": 60,
       "xpath": "//div[starts-with(@id, 'LPMcontainer')]",
       "action": "click"
@@ -58,7 +64,7 @@
     {
       "wait": 2,
       "xpath": "",
-      "action": ""
+      "action": "sleep"
     },
     {
       "wait": 0,
@@ -74,7 +80,7 @@
     {
       "wait": 2,
       "xpath": "",
-      "action": ""
+      "action": "sleep"
     },
     {
       "wait": 0,
@@ -96,7 +102,7 @@
     {
       "wait": 5,
       "xpath": "",
-      "action": ""
+      "action": "sleep"
     },
     {
       "wait": 0,
@@ -118,7 +124,7 @@
     {
       "wait": 5,
       "xpath": "",
-      "action": ""
+      "action": "sleep"
     },
     {
       "wait": 0,
@@ -142,7 +148,7 @@
     {
       "wait": 5,
       "xpath": "",
-      "action": ""
+      "action": "sleep"
     },
     {
       "wait": 0,
@@ -152,7 +158,7 @@
     {
       "wait": 5,
       "xpath": "",
-      "action": ""
+      "action": "sleep"
     },
     {
       "wait": 0,
@@ -162,7 +168,7 @@
     {
       "wait": 5,
       "xpath": "",
-      "action": ""
+      "action": "sleep"
     },
     {
       "wait": 0,

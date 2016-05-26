@@ -65,6 +65,7 @@ public class JSONRecipe implements IRecipe {
 
     /**
      * Processes the commands given in the JSON recipe and acts accordingly
+     *
      * @param driver
      * @param instructions
      * @return
@@ -74,14 +75,22 @@ public class JSONRecipe implements IRecipe {
         for (int i = 0; i < instructions.length(); i++) {
             instr = instructions.getJSONObject(i);
             try {
+
+                if ("get".equals(instr.get("action"))) {
+                    driver.get(instr.getString("args"));
+                    continue;
+                }
+
                 int waitInSec = instr.getInt("wait");
-                By locator = By
-                        .xpath(instr.getString("xpath"));
-                if ("".equals(instr.getString("xpath"))) {
-                    // quick hack for adding Thread.sleep support on empty xpath
+
+                if ("sleep".equals(instr.get("action"))) {
                     Thread.sleep(waitInSec * 1000);
                     continue;
-                } else if (waitInSec > 0) {
+                }
+
+                By locator = By
+                        .xpath(instr.getString("xpath"));
+                if (waitInSec > 0) {
                     WebDriverWait wait = new WebDriverWait(driver, waitInSec);
 
                     if ("waitForNewChatline".equals(instr.getString("xpath"))) {

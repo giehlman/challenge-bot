@@ -1,0 +1,55 @@
+{
+  "rampUp": [
+    {
+      "wait": 0,
+      "xpath": "",
+      "action": "get",
+      "args": "https://liveperson.com"
+    },
+    {
+      "wait": 60,
+      "xpath": "//div[starts-with(@id, 'LPMcontainer')]",
+      "action": "click"
+    },
+    {
+      "wait": 20,
+      "xpath": "//div[@class='lp_survey_container']",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//*[contains(text(),'representatives will be back shortly')]",
+      "action": "return"
+    },
+    {
+      "wait": 15,
+      "xpath": "//div[contains(text(),'What is your name?')]/parent::div//input",
+      "action": "sendKeys",
+      "args": "Testuser"
+    },
+    {
+      "wait": 0,
+      "xpath": "//div[contains(text(),'Email Address')]/parent::div//input",
+      "action": "sendKeys",
+      "args": "testuser@liveperson.com"
+    },
+    {
+      "wait": 0,
+      "xpath": "//div[@id='LP_TextFieldQuestion_3']//input",
+      "action": "sendKeys",
+      "args": ""
+    }
+  ],
+  "shutdown": [
+    {
+      "wait": 5,
+      "xpath": "",
+      "action": "sleep"
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_close']",
+      "action": "click"
+    }
+  ]
+}

@@ -35,9 +35,6 @@ public class ChallengeBot {
         }
 
         try {
-            // navigate to frontpage
-            driver.get(frontpage);
-
             IRecipe recipe;
             if (pathToJsonRecipe != null) {
                 // use the liveperson recipe as default
