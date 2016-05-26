@@ -1,0 +1,277 @@
+{
+  "config": {
+    "xpath_message": "//div[@class='lp_input_area']//textarea",
+    "xpath_submit": "//button[@class='lp_send_button']"
+  },
+  "rampUp": [
+    {
+      "wait": 60,
+      "xpath": "//div[starts-with(@id, 'LPMcontainer')]",
+      "action": "click"
+    },
+    {
+      "wait": 20,
+      "xpath": "//div[@class='lp_survey_container']",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//*[contains(text(),'representatives will be back shortly')]",
+      "action": "return"
+    },
+    {
+      "wait": 15,
+      "xpath": "//div[contains(text(),'What is your name?')]/parent::div//input",
+      "action": "sendKeys",
+      "args": "Michael"
+    },
+    {
+      "wait": 0,
+      "xpath": "//div[contains(text(),'Email Address')]/parent::div//input",
+      "action": "sendKeys",
+      "args": "dev@typical.de"
+    },
+    {
+      "wait": 0,
+      "xpath": "//div[@id='LP_TextFieldQuestion_3']//input",
+      "action": "sendKeys",
+      "args": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_submit_button']",
+      "action": "click"
+    },
+    {
+      "wait": 120,
+      "xpath": "//div[contains(text(),'You are now chatting with')]",
+      "action": ""
+    }
+  ],
+  "talk": [
+    {
+      "wait": 0,
+      "xpath": "//div[@class='lp_input_area']//textarea",
+      "action": "sendKeys",
+      "args": "I'm Michael"
+    },
+    {
+      "wait": 2,
+      "xpath": "",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_send_button']",
+      "action": "click"
+    },
+    {
+      "wait": 0,
+      "xpath": "//div[@class='lp_input_area']//textarea",
+      "action": "sendKeys",
+      "args": "Sorry for my english"
+    },
+    {
+      "wait": 2,
+      "xpath": "",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_send_button']",
+      "action": "click"
+    },
+    {
+      "wait": 120,
+      "xpath": "waitForNewChatline",
+      "action": "",
+      "args": "//div[@class='lp_chat_line_wrapper lp_agent']//div[@class='lp_chat_line']"
+    },
+    {
+      "wait": 10,
+      "xpath": "//div[@class='lp_input_area']//textarea",
+      "action": "sendKeys",
+      "args": "Do you have free pricing plan? My company has 2 users"
+    },
+    {
+      "wait": 5,
+      "xpath": "",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_send_button']",
+      "action": "click"
+    },
+    {
+      "wait": 120,
+      "xpath": "waitForNewChatline",
+      "action": "",
+      "args": "//div[@class='lp_chat_line_wrapper lp_agent']//div[@class='lp_chat_line']"
+    },
+    {
+      "wait": 10,
+      "xpath": "//div[@class='lp_input_area']//textarea",
+      "action": "sendKeys",
+      "args": "do you have free plan to try? 30 days or so?"
+    },
+    {
+      "wait": 5,
+      "xpath": "",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_send_button']",
+      "action": "click"
+    },
+    {
+      "wait": 120,
+      "xpath": "waitForNewChatline",
+      "action": "",
+      "args": "//div[@class='lp_chat_line_wrapper lp_agent']//div[@class='lp_chat_line']"
+    },
+    {
+      "wait": 10,
+      "xpath": "//div[@class='lp_input_area']//textarea",
+      "action": "sendKeys",
+      "args": "I am currently using tawk.to"
+    },
+    {
+      "wait": 5,
+      "xpath": "",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_send_button']",
+      "action": "click"
+    },
+    {
+      "wait": 120,
+      "xpath": "waitForNewChatline",
+      "action": "",
+      "args": "//div[@class='lp_chat_line_wrapper lp_agent']//div[@class='lp_chat_line']"
+    },
+    {
+      "wait": 10,
+      "xpath": "//div[@class='lp_input_area']//textarea",
+      "action": "sendKeys",
+      "args": "Problem is I don't get notification sometimes or notification is too late"
+    },
+    {
+      "wait": 5,
+      "xpath": "",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_send_button']",
+      "action": "click"
+    },
+    {
+      "wait": 120,
+      "xpath": "waitForNewChatline",
+      "action": "",
+      "args": "//div[@class='lp_chat_line_wrapper lp_agent']//div[@class='lp_chat_line']"
+    },
+    {
+      "wait": 10,
+      "xpath": "//div[@class='lp_input_area']//textarea",
+      "action": "sendKeys",
+      "args": "Does this also work for smartphone? We have one iphone and one android phone here"
+    },
+    {
+      "wait": 5,
+      "xpath": "",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_send_button']",
+      "action": "click"
+    },
+    {
+      "wait": 120,
+      "xpath": "waitForNewChatline",
+      "action": "",
+      "args": "//div[@class='lp_chat_line_wrapper lp_agent']//div[@class='lp_chat_line']"
+    },
+    {
+      "wait": 10,
+      "xpath": "//div[@class='lp_input_area']//textarea",
+      "action": "sendKeys",
+      "args": "what's the pricing difference between 1 and 2 users? Do you have something up to 5 users?"
+    },
+    {
+      "wait": 5,
+      "xpath": "",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_send_button']",
+      "action": "click"
+    },
+    {
+      "wait": 10,
+      "xpath": "//div[@class='lp_input_area']//textarea",
+      "action": "sendKeys",
+      "args": "We are curretly 2 but maybe we will be more soon"
+    },
+    {
+      "wait": 5,
+      "xpath": "",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_send_button']",
+      "action": "click"
+    },
+    {
+      "wait": 120,
+      "xpath": "waitForNewChatline",
+      "action": "",
+      "args": "//div[@class='lp_chat_line_wrapper lp_agent']//div[@class='lp_chat_line']"
+    }
+  ],
+  "shutdown": [
+    {
+      "wait": 10,
+      "xpath": "//div[@class='lp_input_area']//textarea",
+      "action": "sendKeys",
+      "args": "Ok cool! Thank for you time! Bye"
+    },
+    {
+      "wait": 5,
+      "xpath": "",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_send_button']",
+      "action": "click"
+    },
+    {
+      "wait": 5,
+      "xpath": "",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_close']",
+      "action": "click"
+    },
+    {
+      "wait": 5,
+      "xpath": "",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_confirm_button']",
+      "action": "click"
+    }
+  ]
+}
