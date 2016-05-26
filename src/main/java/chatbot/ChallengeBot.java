@@ -20,9 +20,10 @@ public class ChallengeBot {
     public static String frontpage = "http://liveperson.com";
     public static String chromeWebdriverPath = "D:\\Downloads\\chromedriver_win32\\chromedriver.exe";
     public static String useDriver = "chrome";
-    public static String username = "Giehlman";
+    public static String username = "Chris";
     public static String email = "c.giehl@gmail.com";
     public static String pathToJsonRecipe = null;
+    public static WitHandler witHandler = null;
 
     public static void main(String[] args) {
 
@@ -111,6 +112,8 @@ public class ChallengeBot {
                     i++;
                     System.out.println(String.format("\tuser nick:\t%s",
                             username));
+                } else if ("-useWit".equals(args[i])) {
+                    witHandler = new WitHandler(null, null);
                 } else if ("-email".equals(args[i])) {
                     email = args[i + 1];
                     i++;
@@ -125,6 +128,8 @@ public class ChallengeBot {
                     b.append(String.format("-frontpage\t"));
                     b.append(String.format("-chrome-driver-path\t"));
                     b.append(String.format("-use-driver\t"));
+                    b.append(String.format("-useWit\t"));
+                    b.append(String.format("-jsonRecipe\t"));
                     b.append(String.format("-help\t"));
                     System.out.println(b.toString());
                     return;

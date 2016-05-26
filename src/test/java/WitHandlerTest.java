@@ -29,4 +29,12 @@ public class WitHandlerTest {
             Assert.assertTrue(false);
         }
     }
+
+    @Test
+    public void talkToWit() throws Exception {
+        String response = handler.talkToWit("How many users do you have?");
+        if (response != null) {
+            System.out.println(response);
+        }
+    }
 }

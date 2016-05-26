@@ -1,5 +1,6 @@
 package chatbot.recipes;
 
+import chatbot.ChallengeBot;
 import chatbot.Util;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -17,9 +18,19 @@ import java.util.List;
 public class JSONRecipe implements IRecipe {
 
     private final JSONObject _recipe;
+    private String _xpath_message = null;
+    private String _xpath_submit = null;
 
     public JSONRecipe(JSONObject recipe) {
         _recipe = recipe;
+        if (_recipe.has("config")) {
+            if (_recipe.getJSONObject("config").has("xpath_message")) {
+                _xpath_message = _recipe.getJSONObject("config").getString("xpath_message");
+            }
+            if (_recipe.getJSONObject("config").has("xpath_submit")) {
+                _xpath_submit = _recipe.getJSONObject("config").getString("xpath_submit");
+            }
+        }
     }
 
     public boolean rampUp(WebDriver driver) {
@@ -50,6 +61,12 @@ public class JSONRecipe implements IRecipe {
         return interpretRecipe(driver, shutdown);
     }
 
+    /**
+     * Processes the commands given in the JSON recipe and acts accordingly
+     * @param driver
+     * @param instructions
+     * @return
+     */
     private boolean interpretRecipe(WebDriver driver, JSONArray instructions) {
         JSONObject instr;
         for (int i = 0; i < instructions.length(); i++) {
@@ -68,16 +85,29 @@ public class JSONRecipe implements IRecipe {
                     WebDriverWait wait = new WebDriverWait(driver, waitInSec);
 
                     if ("waitForNewChatline".equals(instr.getString("xpath"))) {
-                        // hack for detecting reply
-                        int cnt = driver.findElements(By.xpath(instr.getString("args"))).size();
-                        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath(instr.getString("args")), cnt));
-                        
-                        // get the posed question
-                        List<WebElement> replies = driver.findElements(By.xpath(instr.getString("args")));
-                        System.out.println(replies.get(replies.size()-1).getText());
+                        // in this mode, the conversation is transmitted to Wit. If Wit has no answer, the fallback conversation continues according to the JSON recipe
 
-                        // now think of if we should use WIT...
-                        
+                        String witReply = null;
+                        do {
+                            int cnt = driver.findElements(By.xpath(instr.getString("args"))).size();
+                            wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath(instr.getString("args")), cnt));
+
+                            // get the posed question
+                            List<WebElement> replies = driver.findElements(By.xpath(instr.getString("args")));
+                            String reply = replies.get(replies.size() - 1).getText();
+                            System.out.println(reply);
+
+                            // now chat with WIT!
+                            if (ChallengeBot.witHandler != null) {
+                                witReply = ChallengeBot.witHandler.talkToWit(ChallengeBot.witHandler.ask(reply));
+
+                                if (witReply != null && _xpath_message != null) {
+                                    Util.simulateTyping(driver.findElement(By.xpath(_xpath_message)), witReply);
+                                    driver.findElement(By.xpath(_xpath_submit)).click();
+                                }
+                            }
+                        } while (witReply != null);
+
                         continue;
                     } else {
                         wait.until(ExpectedConditions

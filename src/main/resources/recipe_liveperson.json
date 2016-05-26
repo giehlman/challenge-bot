@@ -1,4 +1,8 @@
 {
+  "config": {
+    "xpath_message": "//div[@class='lp_input_area']//textarea",
+    "xpath_submit": "//button[@class='lp_send_button']"
+  },
   "rampUp": [
     {
       "wait": 60,
@@ -19,13 +23,13 @@
       "wait": 15,
       "xpath": "//div[contains(text(),'What is your name?')]/parent::div//input",
       "action": "sendKeys",
-      "args": "Christian"
+      "args": "Tom"
     },
     {
       "wait": 0,
       "xpath": "//div[contains(text(),'Email Address')]/parent::div//input",
       "action": "sendKeys",
-      "args": "info@teslat.de"
+      "args": "jones@phillies.com"
     },
     {
       "wait": 0,
@@ -47,9 +51,9 @@
   "talk": [
     {
       "wait": 0,
-      "xpath" : "//div[@class='lp_input_area']//textarea",
+      "xpath": "//div[@class='lp_input_area']//textarea",
       "action": "sendKeys",
-      "args": "Hi, my name is Chris"
+      "args": "Hi, my name is Tom"
     },
     {
       "wait": 5,
@@ -63,9 +67,9 @@
     },
     {
       "wait": 0,
-      "xpath" : "//div[@class='lp_input_area']//textarea",
+      "xpath": "//div[@class='lp_input_area']//textarea",
       "action": "sendKeys",
-      "args": "Sorry for bad english"
+      "args": "Sorry for my english"
     },
     {
       "wait": 5,
@@ -78,10 +82,10 @@
       "action": "click"
     },
     {
-      "wait": 20,
+      "wait": 60,
       "xpath": "waitForNewChatline",
       "action": "",
-      "args" : "//div[@class='lp_chat_line_wrapper lp_agent']"
+      "args": "//div[@class='lp_chat_line_wrapper lp_agent']"
     },
     {
       "wait": 10,
@@ -100,10 +104,35 @@
       "action": "click"
     },
     {
-      "wait": 30,
+      "wait": 60,
+      "xpath": "waitForNewChatline",
+      "action": "",
+      "args": "//div[@class='lp_chat_line_wrapper lp_agent']"
+    },
+    {
+      "wait": 10,
+      "xpath": "//div[@class='lp_input_area']//textarea",
+      "action": "sendKeys",
+      "args": "do you have free plan to try?"
+    },
+    {
+      "wait": 5,
       "xpath": "",
       "action": ""
     },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_send_button']",
+      "action": "click"
+    },
+    {
+      "wait": 60,
+      "xpath": "waitForNewChatline",
+      "action": "",
+      "args": "//div[@class='lp_chat_line_wrapper lp_agent']"
+    }
+  ],
+  "shutdown": [
     {
       "wait": 10,
       "xpath": "//div[@class='lp_input_area']//textarea",
@@ -119,9 +148,7 @@
       "wait": 0,
       "xpath": "//button[@class='lp_send_button']",
       "action": "click"
-    }
-  ],
-  "shutdown": [
+    },
     {
       "wait": 0,
       "xpath": "//button[@class='lp_close']",

@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a35492be-78c6-418b-b4cc-fb7288d890ab" name="Default" comment="" />
+    <list default="true" id="a35492be-78c6-418b-b4cc-fb7288d890ab" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chatbot/ChallengeBot.java" afterPath="$PROJECT_DIR$/src/main/java/chatbot/ChallengeBot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chatbot/recipes/JSONRecipe.java" afterPath="$PROJECT_DIR$/src/main/java/chatbot/recipes/JSONRecipe.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/chatbot/WitHandler.java" afterPath="$PROJECT_DIR$/src/main/java/chatbot/WitHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/WitHandlerTest.java" afterPath="$PROJECT_DIR$/src/test/java/WitHandlerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/recipe_liveperson.json" afterPath="$PROJECT_DIR$/src/main/resources/recipe_liveperson.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="challenge-bot.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -37,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/chatbot/ChallengeBot.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+              <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,11 +88,9 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/chatbot/recipes/JSONRecipe.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+              <caret line="49" column="15" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#518#519#0" expanded="true" />
-                <element signature="e#550#551#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,8 +119,8 @@
       <file leaf-file-name="recipe_liveperson.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/recipe_liveperson.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2692308">
-              <caret line="101" column="5" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+            <state vertical-scroll-proportion="-10.923077">
+              <caret line="119" column="18" selection-start-line="119" selection-start-column="18" selection-end-line="119" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -124,8 +129,8 @@
       <file leaf-file-name="WitHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/chatbot/WitHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.8214285">
-              <caret line="66" column="46" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="46" />
+            <state vertical-scroll-proportion="1.266537">
+              <caret line="91" column="12" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,7 +142,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/WitHandlerTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -167,7 +172,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/WitHandler.java" />
-        <option value="$PROJECT_DIR$/src/test/java/WitHandlerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Recipe.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChallengeBot.java" />
         <option value="$PROJECT_DIR$/src/main/resources/recipe_liveperson" />
@@ -176,15 +180,16 @@
         <option value="$PROJECT_DIR$/src/main/java/Util.java" />
         <option value="$PROJECT_DIR$/src/main/java/IRecipe.java" />
         <option value="$PROJECT_DIR$/src/main/java/recipes/JSONRecipe.java" />
-        <option value="$PROJECT_DIR$/src/main/java/chatbot/WitHandler.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/chatbot/ChallengeBot.java" />
         <option value="$PROJECT_DIR$/src/main/java/chatbot/recipes/TopformRecipe.java" />
         <option value="$PROJECT_DIR$/src/main/java/chatbot/recipes/LivePersonRecipe.java" />
         <option value="$PROJECT_DIR$/src/main/java/chatbot/recipes/IRecipe.java" />
         <option value="$PROJECT_DIR$/src/main/java/chatbot/Util.java" />
         <option value="$PROJECT_DIR$/src/main/java/chatbot/recipes/JSONRecipe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/chatbot/ChallengeBot.java" />
         <option value="$PROJECT_DIR$/src/main/resources/recipe_liveperson.json" />
+        <option value="$PROJECT_DIR$/src/test/java/WitHandlerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/chatbot/WitHandler.java" />
       </list>
     </option>
   </component>
@@ -376,7 +381,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ChallengeBot Main">
+  <component name="RunManager" selected="Application.ChallengeBot Main JSON">
     <configuration default="false" name="WitHandlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="challenge-bot" />
@@ -406,6 +411,27 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="WitHandlerTest" />
       <option name="METHOD_NAME" value="testAsk" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="WitHandlerTest.talkToWit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="challenge-bot" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WitHandlerTest" />
+      <option name="METHOD_NAME" value="talkToWit" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -640,17 +666,19 @@
       </MavenSettings>
       <method />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.ChallengeBot Main" />
       <item index="1" class="java.lang.String" itemvalue="Application.ChallengeBot Main JSON" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.WitHandlerTest" />
       <item index="3" class="java.lang.String" itemvalue="Maven.ChallengeBot NoArgs" />
       <item index="4" class="java.lang.String" itemvalue="JUnit.WitHandlerTest.testAsk" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.WitHandlerTest.talkToWit" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.WitHandlerTest.testAsk" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.WitHandlerTest" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.WitHandlerTest.talkToWit" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.WitHandlerTest.testAsk" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.WitHandlerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -679,7 +707,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31049252" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4197002" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1401919" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -709,7 +737,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="32" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/chatbot/ChallengeBot.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="33" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -756,37 +792,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/recipe_liveperson.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="101" column="5" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/chatbot/recipes/IRecipe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/chatbot/Util.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/chatbot/ChallengeBot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -804,6 +814,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/chatbot/recipes/JSONRecipe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="15" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/chatbot/recipes/IRecipe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/chatbot/recipes/LivePersonRecipe.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -818,22 +846,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/chatbot/recipes/JSONRecipe.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/chatbot/ChallengeBot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
-            <element signature="e#550#551#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/recipe_liveperson.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.923077">
+          <caret line="119" column="18" selection-start-line="119" selection-start-column="18" selection-end-line="119" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/WitHandlerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -842,8 +876,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/chatbot/WitHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8214285">
-          <caret line="66" column="46" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="46" />
+        <state vertical-scroll-proportion="1.266537">
+          <caret line="91" column="12" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

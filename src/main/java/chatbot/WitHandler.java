@@ -7,6 +7,7 @@ import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -74,4 +75,26 @@ public class WitHandler {
         return builder.toString();
     }
 
+    /**
+     * Transforms a Wit response into a reply sentence
+     * @param ask
+     * @return
+     */
+    public String talkToWit(String ask) {
+        try {
+            JSONObject response = new JSONObject(ask(ask));
+
+            if (!response.has("entities")) return null;
+
+            JSONObject entities = response.getJSONObject("entities");
+
+            if (entities.has("contact")) return "Hi";
+            
+            return "Could you explain that?";
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
 }
