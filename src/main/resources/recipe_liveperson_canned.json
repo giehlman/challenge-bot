@@ -201,6 +201,28 @@
       "wait": 10,
       "xpath": "//div[@class='lp_input_area']//textarea",
       "action": "sendKeys",
+      "args": "I have heared smartphone app is not available in germany. Do you know when it will be available?"
+    },
+    {
+      "wait": 5,
+      "xpath": "",
+      "action": ""
+    },
+    {
+      "wait": 0,
+      "xpath": "//button[@class='lp_send_button']",
+      "action": "click"
+    },
+    {
+      "wait": 120,
+      "xpath": "waitForNewChatline",
+      "action": "",
+      "args": "//div[@class='lp_chat_line_wrapper lp_agent']//div[@class='lp_chat_line']"
+    },
+    {
+      "wait": 10,
+      "xpath": "//div[@class='lp_input_area']//textarea",
+      "action": "sendKeys",
       "args": "what's the pricing difference between 1 and 2 users? Do you have something up to 5 users?"
     },
     {
