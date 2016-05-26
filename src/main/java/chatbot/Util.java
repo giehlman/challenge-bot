@@ -18,7 +18,7 @@ public class Util {
         char[] chars = message.toCharArray();
         for (int i = 0; i < chars.length; i++) {
             try {
-                Thread.sleep(250);
+                Thread.sleep(200);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -38,7 +38,7 @@ public class Util {
         char[] chars = message.toCharArray();
         for (int i = 0; i < chars.length; i++) {
             try {
-                Thread.sleep(125);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

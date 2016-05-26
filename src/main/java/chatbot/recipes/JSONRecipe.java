@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -17,9 +18,10 @@ import java.util.List;
  */
 public class JSONRecipe implements IRecipe {
 
-    private final JSONObject _recipe;
-    private String _xpath_message = null;
-    private String _xpath_submit = null;
+    protected final JSONObject _recipe;
+    protected HashMap<String, String> _variables = new HashMap<String, String>();
+    protected String _xpath_message = null;
+    protected String _xpath_submit = null;
 
     public JSONRecipe(JSONObject recipe) {
         _recipe = recipe;
@@ -67,16 +69,14 @@ public class JSONRecipe implements IRecipe {
      * @param instructions
      * @return
      */
-    private boolean interpretRecipe(WebDriver driver, JSONArray instructions) {
+    protected boolean interpretRecipe(WebDriver driver, JSONArray instructions) {
         JSONObject instr;
         for (int i = 0; i < instructions.length(); i++) {
             instr = instructions.getJSONObject(i);
             try {
+                int waitInSec = instr.getInt("wait");
                 By locator = By
                         .xpath(instr.getString("xpath"));
-
-                int waitInSec = instr.getInt("wait");
-
                 if ("".equals(instr.getString("xpath"))) {
                     // quick hack for adding Thread.sleep support on empty xpath
                     Thread.sleep(waitInSec * 1000);
@@ -86,7 +86,6 @@ public class JSONRecipe implements IRecipe {
 
                     if ("waitForNewChatline".equals(instr.getString("xpath"))) {
                         // in this mode, the conversation is transmitted to Wit. If Wit has no answer, the fallback conversation continues according to the JSON recipe
-
                         String witReply = null;
                         do {
                             int cnt = driver.findElements(By.xpath(instr.getString("args"))).size();
@@ -97,7 +96,7 @@ public class JSONRecipe implements IRecipe {
                             String reply = replies.get(replies.size() - 1).getText();
                             System.out.println(reply);
 
-                            // now chat with WIT!
+                            // If the witHandler is available, try to process messages with Wit!
                             if (ChallengeBot.witHandler != null) {
                                 witReply = ChallengeBot.witHandler.talkToWit(ChallengeBot.witHandler.ask(reply));
 

@@ -88,8 +88,8 @@ public class WitHandler {
 
             JSONObject entities = response.getJSONObject("entities");
 
-            if (entities.has("contact")) return "Hi";
-            
+            if (entities.has("contact")) return "Ok";
+
             return "Could you explain that?";
         } catch (Exception e) {
             e.printStackTrace();

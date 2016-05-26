@@ -1,8 +1,8 @@
 package chatbot;
 
 import chatbot.recipes.IRecipe;
-import chatbot.recipes.JSONRecipe;
 import chatbot.recipes.LivePersonRecipe;
+import chatbot.recipes.TopformRecipe;
 import org.json.JSONObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -43,11 +43,12 @@ public class ChallengeBot {
 
             IRecipe recipe;
             if (pathToJsonRecipe != null) {
+                // use the liveperson recipe as default
                 String jsonData = readFile(pathToJsonRecipe);
                 JSONObject jobj = new JSONObject(jsonData);
-                recipe = new JSONRecipe(jobj);
+                recipe = new LivePersonRecipe(jobj, username, email);
             } else {
-                recipe = new LivePersonRecipe(username, email);
+                recipe = new TopformRecipe(username, email);
             }
 
             if (!recipe.rampUp(driver)) {
@@ -97,12 +98,12 @@ public class ChallengeBot {
                     i++;
                     System.out.println(String.format("\tfrontpage:\t%s",
                             frontpage));
-                } else if ("-chrome-driver-path".equals(args[i])) {
+                } else if ("-chromeDriverPath".equals(args[i])) {
                     chromeWebdriverPath = args[i + 1];
                     i++;
                     System.out.println(String.format(
                             "\tchromeWebDriverPath:\t%s", chromeWebdriverPath));
-                } else if ("-use-driver".equals(args[i])) {
+                } else if ("-useDriver".equals(args[i])) {
                     useDriver = args[i + 1];
                     i++;
                     System.out.println(String.format("\tuse driver:\t%s",
@@ -126,8 +127,8 @@ public class ChallengeBot {
                 } else if ("-help".equals(args[i])) {
                     StringBuilder b = new StringBuilder();
                     b.append(String.format("-frontpage\t"));
-                    b.append(String.format("-chrome-driver-path\t"));
-                    b.append(String.format("-use-driver\t"));
+                    b.append(String.format("-chromeDriverPath\t"));
+                    b.append(String.format("-useDriver\t"));
                     b.append(String.format("-useWit\t"));
                     b.append(String.format("-jsonRecipe\t"));
                     b.append(String.format("-help\t"));

@@ -23,13 +23,13 @@
       "wait": 15,
       "xpath": "//div[contains(text(),'What is your name?')]/parent::div//input",
       "action": "sendKeys",
-      "args": "Tom"
+      "args": "Mike"
     },
     {
       "wait": 0,
       "xpath": "//div[contains(text(),'Email Address')]/parent::div//input",
       "action": "sendKeys",
-      "args": "jones@phillies.com"
+      "args": "mmeyers@typical.de"
     },
     {
       "wait": 0,
@@ -53,10 +53,10 @@
       "wait": 0,
       "xpath": "//div[@class='lp_input_area']//textarea",
       "action": "sendKeys",
-      "args": "Hi, my name is Tom"
+      "args": "I'm Mike"
     },
     {
-      "wait": 5,
+      "wait": 2,
       "xpath": "",
       "action": ""
     },
@@ -72,7 +72,7 @@
       "args": "Sorry for my english"
     },
     {
-      "wait": 5,
+      "wait": 2,
       "xpath": "",
       "action": ""
     },
@@ -82,10 +82,10 @@
       "action": "click"
     },
     {
-      "wait": 60,
+      "wait": 120,
       "xpath": "waitForNewChatline",
       "action": "",
-      "args": "//div[@class='lp_chat_line_wrapper lp_agent']"
+      "args": "//div[@class='lp_chat_line_wrapper lp_agent']//div[@class='lp_chat_line']"
     },
     {
       "wait": 10,
@@ -104,10 +104,10 @@
       "action": "click"
     },
     {
-      "wait": 60,
+      "wait": 120,
       "xpath": "waitForNewChatline",
       "action": "",
-      "args": "//div[@class='lp_chat_line_wrapper lp_agent']"
+      "args": "//div[@class='lp_chat_line_wrapper lp_agent']//div[@class='lp_chat_line']"
     },
     {
       "wait": 10,
@@ -126,10 +126,10 @@
       "action": "click"
     },
     {
-      "wait": 60,
+      "wait": 120,
       "xpath": "waitForNewChatline",
       "action": "",
-      "args": "//div[@class='lp_chat_line_wrapper lp_agent']"
+      "args": "//div[@class='lp_chat_line_wrapper lp_agent']//div[@class='lp_chat_line']"
     }
   ],
   "shutdown": [
@@ -150,9 +150,19 @@
       "action": "click"
     },
     {
+      "wait": 5,
+      "xpath": "",
+      "action": ""
+    },
+    {
       "wait": 0,
       "xpath": "//button[@class='lp_close']",
       "action": "click"
+    },
+    {
+      "wait": 5,
+      "xpath": "",
+      "action": ""
     },
     {
       "wait": 0,

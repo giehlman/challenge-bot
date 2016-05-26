@@ -36,5 +36,15 @@ public class WitHandlerTest {
         if (response != null) {
             System.out.println(response);
         }
+
+        response = handler.talkToWit("Are you currently using another live chat platform on the site?");
+        if (response != null) {
+            System.out.println(response);
+        }
+
+        response = handler.talkToWit("How can I help you today?");
+        if (response != null) {
+            System.out.println(response);
+        }
     }
 }
