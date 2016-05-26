@@ -1,6 +1,7 @@
 .idea/workspace.xml
 .idea/tasks.xml
 target/
+Talk_with_*
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
