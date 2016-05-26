@@ -106,15 +106,15 @@ public class ChallengeBot {
                     System.out.println(String.format("\tScreenshots to:\t%s", screenshotOutputTo));
                 } else if ("-help".equals(args[i])) {
                     StringBuilder b = new StringBuilder();
-                    b.append(String.format("-frontpage\t"));
-                    b.append(String.format("-chromeDriverPath\t"));
-                    b.append(String.format("-useDriver\t"));
-                    b.append(String.format("-useWit\t"));
-                    b.append(String.format("-jsonRecipe\t"));
-                    b.append(String.format("-help\t"));
-                    b.append(String.format("-screenshotOutputTo\t"));
+                    b.append(String.format("-frontpage\n"));
+                    b.append(String.format("-chromeDriverPath\n"));
+                    b.append(String.format("-useDriver\n"));
+                    b.append(String.format("-useWit\n"));
+                    b.append(String.format("-jsonRecipe\n"));
+                    b.append(String.format("-help\n"));
+                    b.append(String.format("-screenshotOutputTo\n"));
                     System.out.println(b.toString());
-                    return;
+                    System.exit(-1);
                 } else {
                     System.out
                             .println(String
