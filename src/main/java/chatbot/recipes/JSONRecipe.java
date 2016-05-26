@@ -98,13 +98,14 @@ public class JSONRecipe implements IRecipe {
 
                             // If the witHandler is available, try to process messages with Wit!
                             if (ChallengeBot.witHandler != null) {
-                                witReply = ChallengeBot.witHandler.talkToWit(ChallengeBot.witHandler.ask(reply));
+                                witReply = ChallengeBot.witHandler.talkToWit(reply);
 
                                 if (witReply != null && _xpath_message != null) {
                                     Util.simulateTyping(driver.findElement(By.xpath(_xpath_message)), witReply);
                                     driver.findElement(By.xpath(_xpath_submit)).click();
                                 }
                             }
+                            Util.takeScreenshot(driver);
                         } while (witReply != null);
 
                         continue;
@@ -129,9 +130,12 @@ public class JSONRecipe implements IRecipe {
 //                        chatbot.Util.simulateTyping(element, instr.getString("args"));
                     }
                 }
+
+                Util.takeScreenshot(driver);
             } catch (Exception e) {
                 e.printStackTrace();
             }
+
         }
         return true;
     }

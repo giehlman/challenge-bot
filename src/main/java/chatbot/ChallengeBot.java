@@ -24,6 +24,7 @@ public class ChallengeBot {
     public static String email = "c.giehl@gmail.com";
     public static String pathToJsonRecipe = null;
     public static WitHandler witHandler = null;
+    public static String screenshotOutputTo = ChallengeBot.class.getProtectionDomain().getCodeSource().getLocation().getPath();
 
     public static void main(String[] args) {
 
@@ -121,9 +122,13 @@ public class ChallengeBot {
                     System.out.println(String
                             .format("\tuser email:\t%s", email));
                 } else if ("-jsonRecipe".equals(args[i])) {
-                    pathToJsonRecipe = args[i+1];
+                    pathToJsonRecipe = args[i + 1];
                     i++;
                     System.out.println(String.format("\tJSON recipe:\t%s", pathToJsonRecipe));
+                } else if ("-screenshotOutputTo".equals(args[i])) {
+                    screenshotOutputTo = args[i+1];
+                    i++;
+                    System.out.println(String.format("\tScreenshots to:\t%s", screenshotOutputTo));
                 } else if ("-help".equals(args[i])) {
                     StringBuilder b = new StringBuilder();
                     b.append(String.format("-frontpage\t"));
@@ -132,6 +137,7 @@ public class ChallengeBot {
                     b.append(String.format("-useWit\t"));
                     b.append(String.format("-jsonRecipe\t"));
                     b.append(String.format("-help\t"));
+                    b.append(String.format("-screenshotOutputTo\t"));
                     System.out.println(b.toString());
                     return;
                 } else {
