@@ -1,8 +1,11 @@
 package chatbot;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import java.io.File;
 
 /**
  * Created by Giehlman on 26.05.2016.
@@ -26,11 +29,22 @@ public class UtilTest {
         try {
             driver = new FirefoxDriver();
             driver.get("http://www.google.de");
-            Util.takeScreenshot(driver);
+            File created = Util.takeScreenshot(driver);
+            Assert.assertNotNull(created);
+            Assert.assertTrue(created.exists());
         } finally {
             driver.close();
             driver.quit();
         }
+    }
+
+    @Test
+    public void testReadFile() throws Exception {
+
+    }
+
+    @Test
+    public void testJsonFromFile() throws Exception {
 
     }
 }

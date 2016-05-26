@@ -65,13 +65,16 @@ public class Util {
      *
      * @param driver
      */
-    public static void takeScreenshot(WebDriver driver) {
+    public static File takeScreenshot(WebDriver driver) {
         try {
             File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(scrFile, new File(ChallengeBot.screenshotOutputTo + File.separator + new SimpleDateFormat("'screenshot_'yyyyMMddhhmm'.png'").format(new Date())));
+            File dstFile =  new File(ChallengeBot.screenshotOutputTo + File.separator + new SimpleDateFormat("'screenshot_'yyyyMMddhhmm'.png'").format(new Date()));
+            FileUtils.copyFile(scrFile, dstFile);
+            return dstFile;
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return null;
     }
 
     /**

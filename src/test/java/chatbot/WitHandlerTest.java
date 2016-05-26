@@ -1,4 +1,5 @@
-import chatbot.WitHandler;
+package chatbot;
+
 import org.json.JSONObject;
 import org.junit.Assert;
 import org.junit.Before;
